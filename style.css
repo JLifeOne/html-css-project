@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    width: 85%;
+    width: 90%;
     margin: auto;
     padding: 15px 0;
     display: flex;
@@ -15,22 +15,51 @@
     justify-content:space-between;
 }
 
-.logo {
+.navbar #logo {
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
     color: aliceblue;
     cursor: pointer;
 }
 
-.navbar ul li{
-    display: inline;
-    margin: 0 20px;
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
 }
 
-a {
+.navbar ul li a{
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
 }
-.hero {
+.navbar ul li::after{
+content: '';
+height: 3px;
+width: 0;
+background: #009688;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+width: 100%;
+}
+
+.banner .hero {
+    width: 100%;
+    position: relative;
+    top: 80%;
+    left: 5%;
+    text-align: left;
+    font-size: 28px;
     color: aqua;
-    display: flex;
+}
+
+p {
+    color: rgb(150, 238, 238);
+    font-size: 18px;
 }
